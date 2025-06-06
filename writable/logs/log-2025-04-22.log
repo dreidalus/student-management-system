@@ -1,0 +1,192 @@
+CRITICAL - 2025-04-22 05:49:26 --> ErrorException: Undefined variable $allowedRoles
+[Method: GET, Route: grades]
+in APPPATH\Controllers\Grades.php on line 20.
+ 1 APPPATH\Controllers\Grades.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $allowedRoles', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Controllers\\Grades.php', 20)
+ 2 APPPATH\Controllers\Grades.php(27): App\Controllers\Grades->ensureLoggedIn()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Grades->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grades))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 07:57:24 --> ErrorException: Undefined variable $grade
+[Method: GET, Route: attendance]
+in APPPATH\Views\attendance\index.php on line 71.
+ 1 APPPATH\Views\attendance\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grade', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\attendance\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\attendance\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('attendance/index', [], true)
+ 5 APPPATH\Controllers\Attendance.php(36): view('attendance/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Attendance->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 07:57:28 --> ErrorException: Undefined variable $grade
+[Method: GET, Route: attendance]
+in APPPATH\Views\attendance\index.php on line 71.
+ 1 APPPATH\Views\attendance\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grade', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\attendance\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\attendance\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('attendance/index', [], true)
+ 5 APPPATH\Controllers\Attendance.php(36): view('attendance/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Attendance->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 07:58:18 --> ErrorException: Undefined variable $grade
+[Method: GET, Route: attendance]
+in APPPATH\Views\attendance\index.php on line 71.
+ 1 APPPATH\Views\attendance\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grade', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\attendance\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\attendance\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('attendance/index', [], true)
+ 5 APPPATH\Controllers\Attendance.php(36): view('attendance/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Attendance->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:02:51 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 59.
+ 1 APPPATH\Views\courses\index.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 59)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:03:18 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 59.
+ 1 APPPATH\Views\courses\index.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 59)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:03:40 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 59.
+ 1 APPPATH\Views\courses\index.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 59)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:03:41 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 59.
+ 1 APPPATH\Views\courses\index.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 59)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:04:34 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 57.
+ 1 APPPATH\Views\courses\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:05:33 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 57.
+ 1 APPPATH\Views\courses\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:05:34 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 57.
+ 1 APPPATH\Views\courses\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:05:34 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 57.
+ 1 APPPATH\Views\courses\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-22 08:05:35 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: courses]
+in APPPATH\Views\courses\index.php on line 57.
+ 1 APPPATH\Views\courses\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\StudentManagement\\app\\Views\\courses\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('courses/index', [], true)
+ 5 APPPATH\Controllers\Courses.php(37): view('courses/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')

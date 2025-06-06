@@ -1,0 +1,560 @@
+ERROR - 2025-04-23 14:36:21 --> mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause' in C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `student...', 0)
+#1 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\xampp\htdocs\StudentManagement\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\xampp\htdocs\StudentManagement\app\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(933): App\Controllers\Students->index()
+#6 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#7 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\StudentManagement\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\StudentManagement\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\StudentManagement\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\StudentManagement\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-04-23 14:36:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+[Method: GET, Route: students]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 2 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:36:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 4 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:36:21 --> [Caused by] mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 5 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+ERROR - 2025-04-23 14:40:35 --> mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause' in C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `student...', 0)
+#1 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\xampp\htdocs\StudentManagement\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\xampp\htdocs\StudentManagement\app\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(933): App\Controllers\Students->index()
+#6 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#7 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\StudentManagement\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\StudentManagement\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\StudentManagement\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\StudentManagement\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-04-23 14:40:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+[Method: GET, Route: students]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 2 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:40:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 4 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:40:35 --> [Caused by] mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 5 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+ERROR - 2025-04-23 14:40:59 --> mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause' in C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `student...', 0)
+#1 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\xampp\htdocs\StudentManagement\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\xampp\htdocs\StudentManagement\app\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(933): App\Controllers\Students->index()
+#6 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#7 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\StudentManagement\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\StudentManagement\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\StudentManagement\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\StudentManagement\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-04-23 14:40:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+[Method: GET, Route: students]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 2 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:40:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 4 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:40:59 --> [Caused by] mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 5 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+ERROR - 2025-04-23 14:42:07 --> mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause' in C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `student...', 0)
+#1 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\xampp\htdocs\StudentManagement\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\xampp\htdocs\StudentManagement\app\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(933): App\Controllers\Students->index()
+#6 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#7 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\StudentManagement\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\StudentManagement\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\StudentManagement\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\StudentManagement\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-04-23 14:42:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+[Method: GET, Route: students]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 2 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:42:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 4 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:42:07 --> [Caused by] mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 5 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+ERROR - 2025-04-23 14:45:09 --> mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause' in C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `student...', 0)
+#1 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\xampp\htdocs\StudentManagement\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\xampp\htdocs\StudentManagement\app\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(933): App\Controllers\Students->index()
+#6 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#7 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\StudentManagement\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\StudentManagement\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\StudentManagement\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\StudentManagement\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-04-23 14:45:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+[Method: GET, Route: students]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 2 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:45:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 4 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:45:09 --> [Caused by] mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 5 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+ERROR - 2025-04-23 14:49:20 --> mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause' in C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `student...', 0)
+#1 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\xampp\htdocs\StudentManagement\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\xampp\htdocs\StudentManagement\app\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(933): App\Controllers\Students->index()
+#6 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#7 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\StudentManagement\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\StudentManagement\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\StudentManagement\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\StudentManagement\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-04-23 14:49:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+[Method: GET, Route: students]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 2 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:49:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 4 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:49:20 --> [Caused by] mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 5 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+ERROR - 2025-04-23 14:49:25 --> mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause' in C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `student...', 0)
+#1 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\xampp\htdocs\StudentManagement\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\xampp\htdocs\StudentManagement\app\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(933): App\Controllers\Students->index()
+#6 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#7 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\StudentManagement\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\StudentManagement\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\StudentManagement\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\StudentManagement\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-04-23 14:49:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+[Method: GET, Route: students]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 2 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:49:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 4 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:49:25 --> [Caused by] mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 5 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+ERROR - 2025-04-23 14:49:41 --> mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause' in C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\StudentManagement\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `student...', 0)
+#1 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `student...')
+#2 C:\xampp\htdocs\StudentManagement\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `student...')
+#3 C:\xampp\htdocs\StudentManagement\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `student...', Array, false)
+#4 C:\xampp\htdocs\StudentManagement\app\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(933): App\Controllers\Students->index()
+#6 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#7 C:\xampp\htdocs\StudentManagement\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\StudentManagement\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\StudentManagement\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\StudentManagement\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\StudentManagement\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-04-23 14:49:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+[Method: GET, Route: students]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 2 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:49:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 4 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
+CRITICAL - 2025-04-23 14:49:41 --> [Caused by] mysqli_sql_exception: Unknown column 'students.course_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `students`.*, `courses`.`course_name`
+FROM `students`
+LEFT JOIN `courses` ON `students`.`course_id` = `courses`.`course_id`', [], false)
+ 5 APPPATH\Controllers\Students.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Students->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\StudentManagement\\public\\index.php')
